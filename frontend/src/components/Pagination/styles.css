@@ -1,12 +1,12 @@
 .dsmovie-pagination-container {
-    padding: 15 px;
+    padding: 15px 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .dsmovie-pagination-box {
-    width: 180;
+    width: 180px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,8 +29,17 @@
     cursor: pointer;
 }
 
-.dsmovie-pagination-box svg {
+.dsmovie-pagination-button svg {
     filter: brightness(0) saturate(100%) invert(26%) sepia(19%) saturate(7395%) hue-rotate(234deg) brightness(89%) contrast(92%);
+}
+
+.dsmovie-pagination-button:disabled {
+    border: 1px solid #c2c2c2;
+    cursor: unset;
+}
+
+.dsmovie-pagination-button:disabled svg {
+    filter: none;
 }
 
 .dsmovie-pagination-container p {
