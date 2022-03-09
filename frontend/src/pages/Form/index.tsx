@@ -21,13 +21,10 @@ function Form() {
                 <h3>{movie.title}</h3>
                 <form className="dsmovie-form">
 
-
                     <div className="form-group dsmovie-form-group">
                         <label htmlFor="email">Informe seu email</label>
                         <input type="email" className="form-control" id="email" />
                     </div>
-
-
 
                     <div className="form-group dsmovie-form-group">
                         <label htmlFor="score">Informe sua avaliação</label>
@@ -40,21 +37,14 @@ function Form() {
                         </select>
                     </div>
 
-
-
                     <div className="dsmovie-form-btn-container">
                         <button type="submit" className="btn btn-primary dsmovie-btn">Salvar</button>
                     </div>
-
-
                 </form >
-
 
                 <Link to="/">
                     <button className="btn btn-primary dsmovie-btn mt-3">Cancelar</button>
-
                 </Link>
-
 
             </div >
         </div >);
