@@ -8,11 +8,6 @@ type Props = {
     onChange: Function
 }
 function Pagination({ page, onChange }: Props) {
-
-
-
-
-
     return (
         <div className="dsmovie-pagination-container">
             <div className="dsmovie-pagination-box">
