@@ -9,16 +9,19 @@ function Listing() {
 
 
     const [pageNumber, setPageNumber] = useState(0);
+
+
+
     const [page, setPage] = useState<MoviePage>({
         content: [],
-        last: true,
+        last: false,
         totalPages: 0,
         totalElements: 0,
         size: 12,
         number: 0,
         first: true,
         numberOfElements: 0,
-        empty: true,
+        empty: true
     }
     )
     useEffect(() => {
@@ -27,8 +30,22 @@ function Listing() {
             setPage(data)
         })
     }, [pageNumber]);
+
+
+    const handlePageChange = (newPageaNumber: number) => {
+        setPageNumber(newPageaNumber)
+
+    }
+
+
+
+
+
     return (
-        <>            <Pagination />
+        <>
+            <Pagination page={page} onChange={handlePageChange} />
+
+
             <div className="container">
                 <div className="row">
                     {page.content.map(movie => (
